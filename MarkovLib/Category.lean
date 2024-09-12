@@ -84,7 +84,7 @@ lemma comp_deterministic {X Y Z : C} (f : X ⟶ Y) (g : Y ⟶ Z) :
   unfold deterministic at *
   simp only [assoc, tensor_comp]
   rw [q,← Category.assoc,p]
-  simp
+  simp only [assoc]
 
 lemma id_deterministic {X : C} : deterministic (𝟙 X) := by
   unfold deterministic
